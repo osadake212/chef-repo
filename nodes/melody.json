@@ -2,6 +2,7 @@
 	"run_list":[
 		"devel-group",
 		"yumsetup",
-		"install-packages"
+		"install-packages",
+		"rbenv"
 	]
 }
