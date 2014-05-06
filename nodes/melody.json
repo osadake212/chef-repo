@@ -1,5 +1,6 @@
 {
 	"run_list":[
-		"yumsetup"
+		"yumsetup",
+		"install-packages"
 	]
 }
