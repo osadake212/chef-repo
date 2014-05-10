@@ -13,9 +13,3 @@ git "/usr/local/rbenv" do
 	action :checkout
 	group "devel"
 end
-
-directory "/usr/local/rbenv/plugins" do
-	group "rbenv"
-	mode "0755"
-	action :create
-end

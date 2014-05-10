@@ -3,6 +3,7 @@
 		"devel-group",
 		"yumsetup",
 		"install-packages",
-		"rbenv"
+		"rbenv",
+		"ruby-build"
 	]
 }
