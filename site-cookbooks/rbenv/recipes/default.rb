@@ -8,7 +8,7 @@
 #
 
 git "/usr/local/rbenv" do
-	repository "git://github.com/sstephenson/rbenv.git"
+	repository "http://github.com/sstephenson/rbenv.git"
 	reference "master"
 	action :checkout
 	group "devel"
