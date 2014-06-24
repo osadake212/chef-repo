@@ -7,12 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
-directory "/usr/local/rbenv/plugins" do
+directory "/usr/local/src/rbenv/plugins" do
 	mode "0755"
 	action :create
 end
 
-git "/usr/local/rbenv/plugins/ruby-build" do
+git "/usr/local/src/rbenv/plugins/ruby-build" do
 	repository "git://github.com/sstephenson/ruby-build.git"
 	reference "master"
 	action :checkout
