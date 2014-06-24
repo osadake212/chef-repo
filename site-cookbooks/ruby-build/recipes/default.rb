@@ -13,7 +13,7 @@ directory "/usr/local/src/rbenv/plugins" do
 end
 
 git "/usr/local/src/rbenv/plugins/ruby-build" do
-	repository "git://github.com/sstephenson/ruby-build.git"
+	repository "https://github.com/sstephenson/ruby-build.git"
 	reference "master"
 	action :checkout
 end
