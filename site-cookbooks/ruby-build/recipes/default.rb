@@ -7,15 +7,19 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# create plugins directory
 directory "/usr/local/src/rbenv/plugins" do
 	mode "0755"
 	action :create
+	not_if { File.exist?('/usr/local/src/rbenv/plugins') }
 end
 
+# checkout ruby-build
 git "/usr/local/src/rbenv/plugins/ruby-build" do
 	repository "https://github.com/sstephenson/ruby-build.git"
 	reference "master"
 	action :checkout
+	not_if { File.exist?('/usr/local/src/rbenv/plugins/ruby-build') }
 end
 
 execute "ruby install" do
