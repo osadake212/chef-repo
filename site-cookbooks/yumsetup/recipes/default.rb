@@ -26,12 +26,15 @@ execute "yum-epel-rpm" do
 	not_if { File.exists?('/etc/yum.repos.d/epel.repo') }
 end
 
+# install yum
 yum_package "yum-fastestmirror" do
 	action :install
+	notifies :run, "execute[yum-update]", :immediately
 end
 
+# update yum package
 execute "yum-update" do
 	user "root"
 	command "yum -y update"
-	action :run
+	action :nothing
 end
