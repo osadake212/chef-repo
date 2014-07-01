@@ -1,0 +1,15 @@
+{
+	"id": "default",
+	"groups":[
+		{
+			"name": "YOUR_GROUP_NAME",
+			"gid": 1000
+		}
+	],
+	"user": {
+		"name": "YOUR_USER_NAME",
+		"gid": 1000,
+		"home": "/home/YOUR_USER_NAME",
+		"shell": "/bin/zsh"
+	}
+}

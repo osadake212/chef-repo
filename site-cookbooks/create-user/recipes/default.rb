@@ -7,31 +7,26 @@
 # All rights reserved - Do Not Redistribute
 #
 
-account = data_bag('user')
+accounts = data_bag('initial_accounts')
 
-account.each do |id|
-
-	item = data_bag_item('user', id)
+accounts.each do |account|
+	item = data_bag_item('initial_accounts', account)
 
 	# create groups
-	item['groups'].each do |g|
-		group g['name'] do
-			gid g['gid']
-			action :create
+	item['groups'].each do |group|
+		group group['name'] do
+			gid group['gid']
+			action:create
 		end
 	end
 
-	# create users
-	item['users'].each do |u|
-		user u['name'] do
-			home u['home']
-			password u['password']
-			shell u['shell']
-			uid u['uid']
-			gid u['gid']
-			supports :manage_home => true
-			action :create
-		end
+	# create uesr
+	user item['user']['name'] do
+		home item['user']['home']
+		shell item['user']['shell']
+		gid item['user']['gid']
+		supports :manage_home => true
+		action :create
 	end
 
 end
