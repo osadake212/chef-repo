@@ -10,9 +10,8 @@
 # checkout rbenv
 git "/usr/local/src/rbenv" do
 	repository "https://github.com/sstephenson/rbenv.git"
-	reference "master"
-	action :checkout
-	group "devel"
+	revision "master"
+	action :sync
 	not_if { File.exist?("/usr/local/src/rbenv") }
 end
 
