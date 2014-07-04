@@ -2,14 +2,15 @@
 	"id": "default",
 	"groups":[
 		{
-			"name": "YOUR_GROUP_NAME",
+			"name": "YOUR_GROUP",
 			"gid": 1000
 		}
 	],
 	"user": {
-		"name": "YOUR_USER_NAME",
+		"name": "YOUR_NAME",
+		"password": "YOUR_ENCRYPTED_PASS",
 		"gid": 1000,
-		"home": "/home/YOUR_USER_NAME",
-		"shell": "/bin/zsh"
+		"home": "/home/YOUR_NAME",
+		"shell": "/bin/bash"
 	}
 }

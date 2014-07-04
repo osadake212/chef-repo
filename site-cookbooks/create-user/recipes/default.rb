@@ -23,6 +23,7 @@ accounts.each do |account|
 	# create uesr
 	user item['user']['name'] do
 		home item['user']['home']
+		password item['user']['password']
 		shell item['user']['shell']
 		gid item['user']['gid']
 		supports :manage_home => true
