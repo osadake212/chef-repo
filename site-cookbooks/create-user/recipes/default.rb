@@ -12,15 +12,13 @@ accounts = data_bag('initial_accounts')
 accounts.each do |account|
 	item = data_bag_item('initial_accounts', account)
 
-	# create groups
-	item['groups'].each do |group|
-		group group['name'] do
-			gid group['gid']
-			action:create
-		end
+	# create a group
+	group item['group']['name'] do
+		gid item['group']['gid']
+		action:create
 	end
 
-	# create uesr
+	# create a uesr
 	user item['user']['name'] do
 		home item['user']['home']
 		password item['user']['password']
