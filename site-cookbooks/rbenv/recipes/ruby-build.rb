@@ -14,8 +14,8 @@ git "/usr/local/src/rbenv/plugins/ruby-build" do
   repository "https://github.com/sstephenson/ruby-build.git"
   reference "master"
   action :checkout
-  user user
-  group group
+  user node['user']['name']
+  group node['group']['name']
   not_if { File.exist?('/usr/local/src/rbenv/plugins/ruby-build') }
 end
 

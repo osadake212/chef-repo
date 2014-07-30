@@ -1,5 +1,5 @@
 user nginx;
-worker_process 1;
+worker_processes 3;
 error_log /var/log/nginx/error.log;
 pid /var/run/nginx.pid;
 
@@ -8,12 +8,11 @@ events {
 }
 
 http {
-    include /etc/nginx/mim.types;
+    include /etc/nginx/mime.types;
     default_type application/octet-stream;
 
     server {
-        listen <%= node["nginx"]["port"] %>
-        server_name centos-one;
+        listen <%= node["nginx"]["port"] %>;
         location / {
             root /usr/share/nginx/html;
             index index.html index.htm;
